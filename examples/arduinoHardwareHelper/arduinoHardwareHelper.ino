@@ -6,6 +6,8 @@ HardwareHelper hwHelper;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+
+  /* 以下は，依存するライブラリ(detectArduinoHardware)の機能 */
   waitForSerial();
 
   Serial.print("CPU ARCH       : ");Serial.println(CPU_ARCH);
@@ -23,6 +25,9 @@ void setup() {
   Serial.print("SPI SCK        : ");Serial.println(SPI_SCK);
   Serial.print("SPI SS         : ");Serial.println(SPI_SS);
   Serial.print("onboard LED    : ");Serial.println(ONBOARD_LED);
+
+  /* ここから，このライブラリの機能 */
+  /* あるデジタルピンがPMW出力可能か否かを判定するもの */
   for (int i=0;i<10;i++){
     Serial.print("Digital port No.");Serial.print(i);Serial.print(" can use PMW : ");
     if (hwHelper.checkPMW(i)) {
