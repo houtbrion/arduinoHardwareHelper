@@ -1,0 +1,2 @@
+# arduinoHardwareHelper
+Arduinoの機種により，いろいろピン配置が違うため，それをプログラム中で判断するためのライブラリ．
