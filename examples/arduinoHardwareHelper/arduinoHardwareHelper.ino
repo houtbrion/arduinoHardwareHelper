@@ -1,15 +1,3 @@
-# arduinoHardwareHelper
-Arduinoの機種により，いろいろピン配置が違うため，それをプログラム中で判断するためのライブラリ．
-
-
-## 依存するライブラリ
-detectArduinoHardware
-
-https://github.com/houtbrion/detectArduinoHardware
-
-
-## 使い方
-```
 
 #include "arduinoHardwareHelper.h"
 
@@ -49,7 +37,3 @@ void loop() {
   // put your main code here, to run repeatedly:
 
 }
-```
-
-
-
